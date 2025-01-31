@@ -13,16 +13,14 @@ connectDB();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Set view engine to EJS
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+
 
 // Routes
 app.use('/auth', authRoutes);
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('index');
+    res.json('Welcome to the home route');
 });
 
 const PORT = process.env.PORT || 5000;
