@@ -20,7 +20,7 @@ app.use('/auth', authRoutes);
 
 // Home route
 app.get('/', (req, res) => {
-    res.json('Welcome to the home route');
+    res.json('Hi this is MathanKumar');
 });
 
 const PORT = process.env.PORT || 5000;
